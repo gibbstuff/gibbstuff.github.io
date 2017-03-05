@@ -1,0 +1,25 @@
+# Site settings
+url: http://www.gibbstuff.com
+name: 'Gibbs Tuff'
+description: Selling Gibbs Brand Lubricant
+
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Build Settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Configuration
+ga_track_id: UA-12642425-1
+twitter_id: iamchristinabot
+instagram_id: iamchristinabot
+pinterest_id: iamchristinabot
+linkedin_id: christinadobi
+email: iamchristinabot@gmail.com

@@ -1,0 +1,24 @@
+<div class="sidebar">
+
+  {% if page.sidebar-about == true %}
+    <hr>
+    {% include post-sidebar-about.html %}
+  {% endif %}
+
+  {% if page.sidebar-categories == true %}
+    <hr>
+    {% include post-sidebar-categories.html %}
+  {% endif %}
+
+  {% if page.sidebar-tags == true %}
+    <hr>
+    {% include post-sidebar-tags.html %}
+  {% endif %}
+
+  {% if page.sidebar-email == true %}
+    <hr>
+    {% include post-sidebar-email.html %}
+  {% endif %}
+  <hr>
+  {% include post-sidebar-social.html %}
+</div>
