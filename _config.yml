@@ -5,7 +5,6 @@ description: Selling Gibbs Brand Lubricant
 
 # Gems
 gems:
-  - jekyll-sitemap
   - jekyll-feed
 exclude:
   - Gemfile
