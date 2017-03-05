@@ -19,6 +19,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 .animated-d1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -27,14 +28,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
 
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+.animated {
+  &.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  &.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
 }
 
 @-webkit-keyframes bounce {
@@ -53,6 +56,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(-15px);
   }
 }
+
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -74,6 +78,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
@@ -89,6 +94,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes flash {
   0%, 50%, 100% {
     opacity: 1;
@@ -98,6 +104,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .flash {
   -webkit-animation-name: flash;
@@ -123,6 +130,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -142,6 +150,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1);
   }
 }
+
 
 .pulse {
   -webkit-animation-name: pulse;
@@ -175,6 +184,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rubberBand {
   0% {
     -webkit-transform: scale(1);
@@ -207,6 +217,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .rubberBand {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
@@ -229,6 +240,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes shake {
   0%, 100% {
     -webkit-transform: translateX(0);
@@ -248,6 +260,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(10px);
   }
 }
+
 
 .shake {
   -webkit-animation-name: shake;
@@ -281,6 +294,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes swing {
   20% {
     -webkit-transform: rotate(15deg);
@@ -312,6 +326,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: rotate(0deg);
   }
 }
+
 
 .swing {
   -webkit-transform-origin: top center;
@@ -348,6 +363,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes tada {
   0% {
     -webkit-transform: scale(1);
@@ -379,6 +395,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1) rotate(0);
   }
 }
+
 
 .tada {
   -webkit-animation-name: tada;
@@ -424,6 +441,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes wobble {
   0% {
     -webkit-transform: translateX(0%);
@@ -468,6 +486,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .wobble {
   -webkit-animation-name: wobble;
   animation-name: wobble;
@@ -476,8 +495,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes bounceIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   50% {
@@ -487,8 +506,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   70% {
-    -webkit-transform: scale(.9);
-    transform: scale(.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   100% {
@@ -498,12 +517,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    -ms-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   50% {
@@ -514,9 +534,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   70% {
-    -webkit-transform: scale(.9);
-    -ms-transform: scale(.9);
-    transform: scale(.9);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   100% {
@@ -526,6 +546,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1);
   }
 }
+
 
 .bounceIn {
   -webkit-animation-name: bounceIn;
@@ -556,6 +577,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceInDown {
   0% {
     opacity: 0;
@@ -583,6 +605,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .bounceInDown {
   -webkit-animation-name: bounceInDown;
@@ -613,6 +636,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -640,6 +664,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .bounceInLeft {
   -webkit-animation-name: bounceInLeft;
@@ -670,6 +695,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceInRight {
   0% {
     opacity: 0;
@@ -697,6 +723,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
@@ -727,6 +754,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceInUp {
   0% {
     opacity: 0;
@@ -755,6 +783,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .bounceInUp {
   -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
@@ -767,8 +796,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   25% {
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
   }
 
   50% {
@@ -779,10 +808,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
   }
 }
+
 
 @keyframes bounceOut {
   0% {
@@ -792,9 +822,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   25% {
-    -webkit-transform: scale(.95);
-    -ms-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
   }
 
   50% {
@@ -806,11 +836,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    -ms-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
   }
 }
+
 
 .bounceOut {
   -webkit-animation-name: bounceOut;
@@ -836,6 +867,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceOutDown {
   0% {
     -webkit-transform: translateY(0);
@@ -857,6 +889,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(2000px);
   }
 }
+
 
 .bounceOutDown {
   -webkit-animation-name: bounceOutDown;
@@ -882,6 +915,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceOutLeft {
   0% {
     -webkit-transform: translateX(0);
@@ -903,6 +937,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(-2000px);
   }
 }
+
 
 .bounceOutLeft {
   -webkit-animation-name: bounceOutLeft;
@@ -928,6 +963,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceOutRight {
   0% {
     -webkit-transform: translateX(0);
@@ -949,6 +985,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(2000px);
   }
 }
+
 
 .bounceOutRight {
   -webkit-animation-name: bounceOutRight;
@@ -974,6 +1011,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes bounceOutUp {
   0% {
     -webkit-transform: translateY(0);
@@ -996,6 +1034,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .bounceOutUp {
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
@@ -1011,6 +1050,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1020,6 +1060,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .fadeIn {
   -webkit-animation-name: fadeIn;
@@ -1040,6 +1081,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -1055,6 +1097,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
@@ -1075,6 +1118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -1090,6 +1134,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
@@ -1110,6 +1155,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -1125,6 +1171,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
@@ -1145,6 +1192,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInLeftBig {
   0% {
     opacity: 0;
@@ -1160,6 +1208,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
@@ -1180,6 +1229,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -1195,6 +1245,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
@@ -1215,6 +1266,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInRightBig {
   0% {
     opacity: 0;
@@ -1230,6 +1282,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
@@ -1250,6 +1303,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -1265,6 +1319,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
@@ -1285,6 +1340,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeInUpBig {
   0% {
     opacity: 0;
@@ -1301,6 +1357,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
@@ -1316,6 +1373,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -1325,6 +1383,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .fadeOut {
   -webkit-animation-name: fadeOut;
@@ -1345,6 +1404,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutDown {
   0% {
     opacity: 1;
@@ -1360,6 +1420,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(20px);
   }
 }
+
 
 .fadeOutDown {
   -webkit-animation-name: fadeOutDown;
@@ -1380,6 +1441,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutDownBig {
   0% {
     opacity: 1;
@@ -1395,6 +1457,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(2000px);
   }
 }
+
 
 .fadeOutDownBig {
   -webkit-animation-name: fadeOutDownBig;
@@ -1415,6 +1478,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
@@ -1430,6 +1494,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(-20px);
   }
 }
+
 
 .fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
@@ -1450,6 +1515,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutLeftBig {
   0% {
     opacity: 1;
@@ -1465,6 +1531,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(-2000px);
   }
 }
+
 
 .fadeOutLeftBig {
   -webkit-animation-name: fadeOutLeftBig;
@@ -1485,6 +1552,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutRight {
   0% {
     opacity: 1;
@@ -1500,6 +1568,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(20px);
   }
 }
+
 
 .fadeOutRight {
   -webkit-animation-name: fadeOutRight;
@@ -1520,6 +1589,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutRightBig {
   0% {
     opacity: 1;
@@ -1535,6 +1605,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(2000px);
   }
 }
+
 
 .fadeOutRightBig {
   -webkit-animation-name: fadeOutRightBig;
@@ -1555,6 +1626,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutUp {
   0% {
     opacity: 1;
@@ -1570,6 +1642,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(-20px);
   }
 }
+
 
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
@@ -1590,6 +1663,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes fadeOutUpBig {
   0% {
     opacity: 1;
@@ -1605,6 +1679,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(-2000px);
   }
 }
+
 
 .fadeOutUpBig {
   -webkit-animation-name: fadeOutUpBig;
@@ -1634,8 +1709,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   80% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
-    transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(0deg) scale(0.95);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -1647,6 +1722,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-timing-function: ease-in;
   }
 }
+
 
 @keyframes flip {
   0% {
@@ -1674,9 +1750,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   80% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
-    -ms-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
-    transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(0.95);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(0deg) scale(0.95);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -1689,6 +1765,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-timing-function: ease-in;
   }
 }
+
 
 .animated.flip {
   -webkit-backface-visibility: visible;
@@ -1722,6 +1799,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotateX(90deg);
@@ -1749,6 +1827,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .flipInX {
   -webkit-backface-visibility: visible !important;
@@ -1782,6 +1861,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes flipInY {
   0% {
     -webkit-transform: perspective(400px) rotateY(90deg);
@@ -1810,6 +1890,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .flipInY {
   -webkit-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
@@ -1832,6 +1913,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes flipOutX {
   0% {
     -webkit-transform: perspective(400px) rotateX(0deg);
@@ -1847,6 +1929,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .flipOutX {
   -webkit-animation-name: flipOutX;
@@ -1870,6 +1953,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes flipOutY {
   0% {
     -webkit-transform: perspective(400px) rotateY(0deg);
@@ -1885,6 +1969,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .flipOutY {
   -webkit-backface-visibility: visible !important;
@@ -1920,6 +2005,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes lightSpeedIn {
   0% {
     -webkit-transform: translateX(100%) skewX(-30deg);
@@ -1950,6 +2036,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
@@ -1971,6 +2058,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes lightSpeedOut {
   0% {
     -webkit-transform: translateX(0%) skewX(0deg);
@@ -1986,6 +2074,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .lightSpeedOut {
   -webkit-animation-name: lightSpeedOut;
@@ -2012,6 +2101,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateIn {
   0% {
     -webkit-transform-origin: center center;
@@ -2033,6 +2123,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .rotateIn {
   -webkit-animation-name: rotateIn;
@@ -2057,6 +2148,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateInDownLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2078,6 +2170,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .rotateInDownLeft {
   -webkit-animation-name: rotateInDownLeft;
@@ -2102,6 +2195,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateInDownRight {
   0% {
     -webkit-transform-origin: right bottom;
@@ -2123,6 +2217,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .rotateInDownRight {
   -webkit-animation-name: rotateInDownRight;
@@ -2147,6 +2242,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateInUpLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2168,6 +2264,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .rotateInUpLeft {
   -webkit-animation-name: rotateInUpLeft;
@@ -2192,6 +2289,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateInUpRight {
   0% {
     -webkit-transform-origin: right bottom;
@@ -2213,6 +2311,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 1;
   }
 }
+
 
 .rotateInUpRight {
   -webkit-animation-name: rotateInUpRight;
@@ -2237,6 +2336,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateOut {
   0% {
     -webkit-transform-origin: center center;
@@ -2258,6 +2358,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .rotateOut {
   -webkit-animation-name: rotateOut;
@@ -2282,6 +2383,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateOutDownLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2303,6 +2405,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .rotateOutDownLeft {
   -webkit-animation-name: rotateOutDownLeft;
@@ -2327,6 +2430,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateOutDownRight {
   0% {
     -webkit-transform-origin: right bottom;
@@ -2348,6 +2452,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .rotateOutDownRight {
   -webkit-animation-name: rotateOutDownRight;
@@ -2372,6 +2477,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateOutUpLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2393,6 +2499,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 .rotateOutUpLeft {
   -webkit-animation-name: rotateOutUpLeft;
@@ -2417,6 +2524,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rotateOutUpRight {
   0% {
     -webkit-transform-origin: right bottom;
@@ -2439,6 +2547,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .rotateOutUpRight {
   -webkit-animation-name: rotateOutUpRight;
   animation-name: rotateOutUpRight;
@@ -2457,6 +2566,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideInDown {
   0% {
     opacity: 0;
@@ -2471,6 +2581,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .slideInDown {
   -webkit-animation-name: slideInDown;
@@ -2490,6 +2601,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -2504,6 +2616,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -2523,6 +2636,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideInRight {
   0% {
     opacity: 0;
@@ -2537,6 +2651,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
+
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
@@ -2556,6 +2671,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideOutLeft {
   0% {
     -webkit-transform: translateX(0);
@@ -2570,6 +2686,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(-2000px);
   }
 }
+
 
 .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
@@ -2589,6 +2706,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideOutRight {
   0% {
     -webkit-transform: translateX(0);
@@ -2603,6 +2721,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(2000px);
   }
 }
+
 
 .slideOutRight {
   -webkit-animation-name: slideOutRight;
@@ -2622,6 +2741,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideOutUp {
   0% {
     -webkit-transform: translateY(0);
@@ -2636,6 +2756,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(-2000px);
   }
 }
+
 
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
@@ -2656,6 +2777,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideInUp {
   0% {
     opacity: 0;
@@ -2671,6 +2793,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 
 .slideInUp {
   -webkit-animation-name: slideInUp;
@@ -2690,6 +2813,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes slideOutDown {
   0% {
     -webkit-transform: translateY(0);
@@ -2704,6 +2828,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(2000px);
   }
 }
+
 
 .slideOutDown {
   -webkit-animation-name: slideOutDown;
@@ -2754,6 +2879,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 
 @keyframes hinge {
   0% {
@@ -2809,6 +2935,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .hinge {
   -webkit-animation-name: hinge;
   animation-name: hinge;
@@ -2830,6 +2957,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rollIn {
   0% {
     opacity: 0;
@@ -2845,6 +2973,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0px) rotate(0deg);
   }
 }
+
 
 .rollIn {
   -webkit-animation-name: rollIn;
@@ -2867,6 +2996,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 @keyframes rollOut {
   0% {
     opacity: 1;
@@ -2883,6 +3013,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+
 .rollOut {
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
@@ -2891,27 +3022,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   50% {
     opacity: 1;
   }
 }
+
 
 @keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    -ms-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   50% {
     opacity: 1;
   }
 }
+
 
 .zoomIn {
   -webkit-animation-name: zoomIn;
@@ -2921,40 +3054,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomInDown {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(-2000px);
-    transform: scale(.1) translateY(-2000px);
+    -webkit-transform: scale(0.1) translateY(-2000px);
+    transform: scale(0.1) translateY(-2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(60px);
-    transform: scale(.475) translateY(60px);
+    -webkit-transform: scale(0.475) translateY(60px);
+    transform: scale(0.475) translateY(60px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 @keyframes zoomInDown {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(-2000px);
-    -ms-transform: scale(.1) translateY(-2000px);
-    transform: scale(.1) translateY(-2000px);
+    -webkit-transform: scale(0.1) translateY(-2000px);
+    -ms-transform: scale(0.1) translateY(-2000px);
+    transform: scale(0.1) translateY(-2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(60px);
-    -ms-transform: scale(.475) translateY(60px);
-    transform: scale(.475) translateY(60px);
+    -webkit-transform: scale(0.475) translateY(60px);
+    -ms-transform: scale(0.475) translateY(60px);
+    transform: scale(0.475) translateY(60px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 .zoomInDown {
   -webkit-animation-name: zoomInDown;
@@ -2964,40 +3099,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(-2000px);
-    transform: scale(.1) translateX(-2000px);
+    -webkit-transform: scale(0.1) translateX(-2000px);
+    transform: scale(0.1) translateX(-2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(48px);
-    transform: scale(.475) translateX(48px);
+    -webkit-transform: scale(0.475) translateX(48px);
+    transform: scale(0.475) translateX(48px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 @keyframes zoomInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(-2000px);
-    -ms-transform: scale(.1) translateX(-2000px);
-    transform: scale(.1) translateX(-2000px);
+    -webkit-transform: scale(0.1) translateX(-2000px);
+    -ms-transform: scale(0.1) translateX(-2000px);
+    transform: scale(0.1) translateX(-2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(48px);
-    -ms-transform: scale(.475) translateX(48px);
-    transform: scale(.475) translateX(48px);
+    -webkit-transform: scale(0.475) translateX(48px);
+    -ms-transform: scale(0.475) translateX(48px);
+    transform: scale(0.475) translateX(48px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 .zoomInLeft {
   -webkit-animation-name: zoomInLeft;
@@ -3007,40 +3144,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomInRight {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(2000px);
-    transform: scale(.1) translateX(2000px);
+    -webkit-transform: scale(0.1) translateX(2000px);
+    transform: scale(0.1) translateX(2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(-48px);
-    transform: scale(.475) translateX(-48px);
+    -webkit-transform: scale(0.475) translateX(-48px);
+    transform: scale(0.475) translateX(-48px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 @keyframes zoomInRight {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(2000px);
-    -ms-transform: scale(.1) translateX(2000px);
-    transform: scale(.1) translateX(2000px);
+    -webkit-transform: scale(0.1) translateX(2000px);
+    -ms-transform: scale(0.1) translateX(2000px);
+    transform: scale(0.1) translateX(2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(-48px);
-    -ms-transform: scale(.475) translateX(-48px);
-    transform: scale(.475) translateX(-48px);
+    -webkit-transform: scale(0.475) translateX(-48px);
+    -ms-transform: scale(0.475) translateX(-48px);
+    transform: scale(0.475) translateX(-48px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 .zoomInRight {
   -webkit-animation-name: zoomInRight;
@@ -3050,40 +3189,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomInUp {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(2000px);
-    transform: scale(.1) translateY(2000px);
+    -webkit-transform: scale(0.1) translateY(2000px);
+    transform: scale(0.1) translateY(2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(-60px);
-    transform: scale(.475) translateY(-60px);
+    -webkit-transform: scale(0.475) translateY(-60px);
+    transform: scale(0.475) translateY(-60px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 @keyframes zoomInUp {
   0% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(2000px);
-    -ms-transform: scale(.1) translateY(2000px);
-    transform: scale(.1) translateY(2000px);
+    -webkit-transform: scale(0.1) translateY(2000px);
+    -ms-transform: scale(0.1) translateY(2000px);
+    transform: scale(0.1) translateY(2000px);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(-60px);
-    -ms-transform: scale(.475) translateY(-60px);
-    transform: scale(.475) translateY(-60px);
+    -webkit-transform: scale(0.475) translateY(-60px);
+    -ms-transform: scale(0.475) translateY(-60px);
+    transform: scale(0.475) translateY(-60px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
+
 
 .zoomInUp {
   -webkit-animation-name: zoomInUp;
@@ -3099,14 +3240,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   50% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   100% {
     opacity: 0;
   }
 }
+
 
 @keyframes zoomOut {
   0% {
@@ -3118,15 +3260,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   50% {
     opacity: 0;
-    -webkit-transform: scale(.3);
-    -ms-transform: scale(.3);
-    transform: scale(.3);
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
   }
 
   100% {
     opacity: 0;
   }
 }
+
 
 .zoomOut {
   -webkit-animation-name: zoomOut;
@@ -3136,41 +3279,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomOutDown {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(-60px);
-    transform: scale(.475) translateY(-60px);
+    -webkit-transform: scale(0.475) translateY(-60px);
+    transform: scale(0.475) translateY(-60px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(2000px);
-    transform: scale(.1) translateY(2000px);
+    -webkit-transform: scale(0.1) translateY(2000px);
+    transform: scale(0.1) translateY(2000px);
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
   }
 }
 
+
 @keyframes zoomOutDown {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(-60px);
-    -ms-transform: scale(.475) translateY(-60px);
-    transform: scale(.475) translateY(-60px);
+    -webkit-transform: scale(0.475) translateY(-60px);
+    -ms-transform: scale(0.475) translateY(-60px);
+    transform: scale(0.475) translateY(-60px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(2000px);
-    -ms-transform: scale(.1) translateY(2000px);
-    transform: scale(.1) translateY(2000px);
+    -webkit-transform: scale(0.1) translateY(2000px);
+    -ms-transform: scale(0.1) translateY(2000px);
+    transform: scale(0.1) translateY(2000px);
     -webkit-transform-origin: center bottom;
     -ms-transform-origin: center bottom;
     transform-origin: center bottom;
   }
 }
+
 
 .zoomOutDown {
   -webkit-animation-name: zoomOutDown;
@@ -3180,41 +3325,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomOutLeft {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(42px);
-    transform: scale(.475) translateX(42px);
+    -webkit-transform: scale(0.475) translateX(42px);
+    transform: scale(0.475) translateX(42px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(-2000px);
-    transform: scale(.1) translateX(-2000px);
+    -webkit-transform: scale(0.1) translateX(-2000px);
+    transform: scale(0.1) translateX(-2000px);
     -webkit-transform-origin: left center;
     transform-origin: left center;
   }
 }
 
+
 @keyframes zoomOutLeft {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(42px);
-    -ms-transform: scale(.475) translateX(42px);
-    transform: scale(.475) translateX(42px);
+    -webkit-transform: scale(0.475) translateX(42px);
+    -ms-transform: scale(0.475) translateX(42px);
+    transform: scale(0.475) translateX(42px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(-2000px);
-    -ms-transform: scale(.1) translateX(-2000px);
-    transform: scale(.1) translateX(-2000px);
+    -webkit-transform: scale(0.1) translateX(-2000px);
+    -ms-transform: scale(0.1) translateX(-2000px);
+    transform: scale(0.1) translateX(-2000px);
     -webkit-transform-origin: left center;
     -ms-transform-origin: left center;
     transform-origin: left center;
   }
 }
+
 
 .zoomOutLeft {
   -webkit-animation-name: zoomOutLeft;
@@ -3224,41 +3371,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomOutRight {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(-42px);
-    transform: scale(.475) translateX(-42px);
+    -webkit-transform: scale(0.475) translateX(-42px);
+    transform: scale(0.475) translateX(-42px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(2000px);
-    transform: scale(.1) translateX(2000px);
+    -webkit-transform: scale(0.1) translateX(2000px);
+    transform: scale(0.1) translateX(2000px);
     -webkit-transform-origin: right center;
     transform-origin: right center;
   }
 }
 
+
 @keyframes zoomOutRight {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateX(-42px);
-    -ms-transform: scale(.475) translateX(-42px);
-    transform: scale(.475) translateX(-42px);
+    -webkit-transform: scale(0.475) translateX(-42px);
+    -ms-transform: scale(0.475) translateX(-42px);
+    transform: scale(0.475) translateX(-42px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateX(2000px);
-    -ms-transform: scale(.1) translateX(2000px);
-    transform: scale(.1) translateX(2000px);
+    -webkit-transform: scale(0.1) translateX(2000px);
+    -ms-transform: scale(0.1) translateX(2000px);
+    transform: scale(0.1) translateX(2000px);
     -webkit-transform-origin: right center;
     -ms-transform-origin: right center;
     transform-origin: right center;
   }
 }
+
 
 .zoomOutRight {
   -webkit-animation-name: zoomOutRight;
@@ -3268,41 +3417,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes zoomOutUp {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(60px);
-    transform: scale(.475) translateY(60px);
+    -webkit-transform: scale(0.475) translateY(60px);
+    transform: scale(0.475) translateY(60px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(-2000px);
-    transform: scale(.1) translateY(-2000px);
+    -webkit-transform: scale(0.1) translateY(-2000px);
+    transform: scale(0.1) translateY(-2000px);
     -webkit-transform-origin: center top;
     transform-origin: center top;
   }
 }
 
+
 @keyframes zoomOutUp {
   40% {
     opacity: 1;
-    -webkit-transform: scale(.475) translateY(60px);
-    -ms-transform: scale(.475) translateY(60px);
-    transform: scale(.475) translateY(60px);
+    -webkit-transform: scale(0.475) translateY(60px);
+    -ms-transform: scale(0.475) translateY(60px);
+    transform: scale(0.475) translateY(60px);
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: scale(.1) translateY(-2000px);
-    -ms-transform: scale(.1) translateY(-2000px);
-    transform: scale(.1) translateY(-2000px);
+    -webkit-transform: scale(0.1) translateY(-2000px);
+    -ms-transform: scale(0.1) translateY(-2000px);
+    transform: scale(0.1) translateY(-2000px);
     -webkit-transform-origin: center top;
     -ms-transform-origin: center top;
     transform-origin: center top;
   }
 }
+
 
 .zoomOutUp {
   -webkit-animation-name: zoomOutUp;
