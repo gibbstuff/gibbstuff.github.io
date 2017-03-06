@@ -1,2 +1,13 @@
 $dark-color: #1a1a24;
-$bold-color: #ffc700;
+$bold-color: #e4620c;
+
+
+$bp-small : 480px;
+$bp-small-plus : 650px;
+$bp-medium : 768px;
+$bp-large : 992px;
+$bp-xlarge : 1200px;
+
+@mixin breakp ($breaksize){
+    @media only screen and (min-width: $breaksize) { @content; }
+}
