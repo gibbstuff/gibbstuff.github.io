@@ -999,7 +999,7 @@ Screenshots Intro
 ========================================================================== */
 
 .screenshots-intro {
-  padding: 170px 0 40px 0;
+  padding: 100px 0 40px 0;
   background-color: #f6f7f9;
   h1 {
     margin-bottom: 20px;
@@ -1131,6 +1131,9 @@ Footer
 
 footer {
   padding: 100px 0;
+  .logo{
+    max-width: 150px;
+  }
   p {
     color: #c7cacc;
     font-size: 12px;
