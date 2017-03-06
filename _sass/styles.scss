@@ -911,10 +911,6 @@ Surfaces
 
 .surfaces {
   background: $dark-color;
-  padding: 40px 0;
-  @include breakp($bp-medium){
-    padding: 80px 0;
-  }
   h1 {
     margin: 0 0 20px 0;
     color: #fff;
@@ -928,14 +924,21 @@ Surfaces
     margin-bottom: 25px;
     color: #fff;
   }
-  img{
 
+  .surfaces-wrap {
+    position: relative;
+    min-height: 600px;
+    padding: 40px 0;
+    @include breakp($bp-medium){
+      padding: 100px 0;
+    }
   }
 }
 
 /* ==========================================================================
 Showcase
 ========================================================================== */
+
 
 .showcase {
   background: url('../img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
@@ -958,6 +961,7 @@ Showcase
   left: 20%;
   min-height: 676px;
   width: 359px;
+
 }
 
 .device-content {
@@ -966,7 +970,27 @@ Showcase
   left: 56px;
   width: 247px;
   height: 445px;
+  img {
+    width: auto;
+    height: 445px;
+  }
+}
 
+.showcase-wrap {
+  position: relative;
+  padding: 100px 0;
+  min-height: 600px;
+}
+
+.showcase-slider {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .flickity-page-dots {
+    bottom: 20px;
+  }
 }
 
 
@@ -975,13 +999,11 @@ Screenshots Intro
 ========================================================================== */
 
 .screenshots-intro {
-  padding: 170px 0 100px 0;
+  padding: 170px 0 40px 0;
   background-color: #f6f7f9;
   h1 {
     margin-bottom: 20px;
     color: #24374b;
-    font-weight: 400;
-    font-size: 22px;
   }
   p {
     margin-bottom: 25px;
@@ -1002,7 +1024,7 @@ Screenshots
       float: left;
       min-height: 100%;
       width: 25%;
-      background-color: #000;
+      background-color: $dark-color;
       list-style: none;
     }
   }
@@ -1028,7 +1050,7 @@ Screenshots
     padding: 25% 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(63, 97, 132, 0.85);
+    background-color: rgba(26, 26, 36, .95);
     text-align: center;
     font-size: 15px;
     opacity: 0;
