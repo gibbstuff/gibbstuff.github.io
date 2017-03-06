@@ -1,0 +1,12 @@
+- material: Wood
+  image: "wood.png"
+- material: Metal
+  image: "metal.png"
+- material: Leather
+  image: "leather.png"
+- material: Plastic
+  image: "plastic.png"
+- material: Glass
+  image: "glass.png"
+- material: Rubber
+  image: "rubber.png"

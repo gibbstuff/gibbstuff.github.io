@@ -61,7 +61,7 @@ title: Designer and Front-end Developer
 					</div>
 					<div class="feature-content">
 						<h1>Multi-Purpose</h1>
-						<p>Perfect if you run your own start-up, product or service. Boxify can showcase your business converting your visits to income.</p>
+						<p>Use gibbs on everything...</p>
 						<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
 					</div>
 				</div>
@@ -70,8 +70,8 @@ title: Designer and Front-end Developer
 						<i class="fa fa-heart"></i>
 					</div>
 					<div class="feature-content">
-						<h1>Absolutely Free</h1>
-						<p>As aways, download Boxify for free exclusively from Codrops. If you love Boxify and want to thank me, simply <a href="http://peterfinlan.com/">buy me a beer</a>. </p>
+						<h1>Proudly made in the USA</h1>
+						<p>e made this shit here yo. proudly. </p>
 						<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
 					</div>
 				</div>
@@ -80,6 +80,32 @@ title: Designer and Front-end Developer
 		</div>
 	</div>
 </section>
+
+<section class="surfaces">
+	<div class="showcase-wrap">
+		<div class="texture-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-centered text-center">
+					<h1>Multi-Surface & Multi-Purpose</h1>
+					<p>Gibbs is versitle, it has been tested on various metal, wood, glass, leather, rubber and most plastics, making the usecases endless.</p>
+				</div>
+			</div>
+			<div class="row text-center">
+				{% for surface in site.data.surfaces %}
+				<div class="col-md-2">
+						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="img-responsive">
+						<h2>{{surface.material}}</h2>
+						<a href="#">Learn More</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 <section class="showcase">
 	<div class="showcase-wrap">
 		<div class="texture-overlay"></div>
@@ -88,24 +114,12 @@ title: Designer and Front-end Developer
 				<div class="col-md-6">
 					<div class="device wp3">
 						<div class="device-content">
-							<div class="showcase-slider">
-								<ul class="slides" id="showcaseSlider">
-									<li>
-										<img src="{{ site.url | prepend: site.baseurl }}/img/screen1.jpg" alt="Device Content Image">
-									</li>
-									<li>
-										<img src="{{ site.url | prepend: site.baseurl }}/img/screen2.jpg" alt="Device Content Image">
-									</li>
-									<li>
-										<img src="{{ site.url | prepend: site.baseurl }}/img/screen3.jpg" alt="Device Content Image">
-									</li>
-								</ul>
-							</div>
+							<img src="{{ site.url | prepend: site.baseurl }}/img/product.png" alt="Device Content Image">
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<h1>Showcase your Product or Service</h1>
+					<h1>Multi-Surface & Multi-Purpose</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 					<blockquote class="team-quote">
 						<div class="avatar"><img src="{{ site.url | prepend: site.baseurl }}/img/avatar.png" alt="User Avatar"></div>
