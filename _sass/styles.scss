@@ -561,6 +561,10 @@ a {
   background-image: url(../img/grid.png);
 }
 
+.upper{
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
 Buttons
 ========================================================================== */
@@ -733,34 +737,12 @@ header i {
 }
 
 /* ==========================================================================
-Video
+Home About
 ========================================================================== */
 
-section.video {
-  i {
-    margin-right: 10px;
-    color: #323a45;
-    vertical-align: middle;
-    font-size: 50px;
-    -webkit-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;
-  }
-  h1 {
-    font-weight: 400;
-    font-size: 20px;
-  }
+section.home-about {
   padding: 60px 0;
   background-color: #f6f7f9;
-  a {
-    color: #323a45;
-    &:hover, &:focus {
-      color: #73d0da;
-      text-decoration: none;
-    }
-    &:hover i, &:focus i {
-      color: #73d0da;
-    }
-  }
 }
 
 /* ==========================================================================
