@@ -519,6 +519,10 @@ Global Styles
   margin: 0 auto;
 }
 
+.bk-light{
+  background-color: $background-light;
+}
+
 .group:after {
   content: "";
   display: table;
@@ -542,9 +546,23 @@ a {
 p {
   font-size: 16px;
   line-height: 25px;
+  color: $body-text-color;
   &.subhead{
     font-size: 17px;
     line-height: 26px;
+  }
+}
+
+.panel{
+  &.panel-padding{
+    padding: 20px;
+  }
+}
+
+a.panel{
+  border: 2px solid #fff;
+  &:hover{
+    border: 2px solid $bold-color;
   }
 }
 
@@ -553,9 +571,9 @@ p {
 }
 
 a {
-  color: #73d0da;
+  color: $link-color;
   &:hover, &:focus {
-    color: #73d0da;
+    color: $bold-color;
     text-decoration: none;
   }
 }
@@ -577,9 +595,10 @@ a {
 Buttons
 ========================================================================== */
 
-.use-btn {
+.use-btn, .submit-button, .add-cart-button {
   display: inline-block;
   margin: 0 10px 10px 0;
+  border: 0;
   padding: 20px 50px;
   border-radius: 3px;
   background-color: $bold-color;
@@ -590,6 +609,15 @@ Buttons
     color: #fff;
     text-decoration: none;
   }
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 18px 46px;
+  border: 2px solid $bold-color;
+  border-radius: 3px;
+  color: $bold-color;
+  font-size: 16px;
 }
 
 .learn-btn, .download-btn {
@@ -632,6 +660,20 @@ Buttons
 /* ==========================================================================
 Navigation
 ========================================================================== */
+.header-full-nav {
+  margin-top: 5px;
+  text-align: right;
+  a {
+    margin-right: 8%;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 
 .nav-toggle {
   position: absolute;
@@ -698,6 +740,7 @@ Navigation
   position: relative;
   height: 26px;
   p {
+    color: #fff;
     margin: 1px 50px 0 0;
   }
 }
@@ -745,13 +788,75 @@ header i {
 }
 
 /* ==========================================================================
-Home About
+Shop page
+========================================================================== */
+.shop-page{
+  .panel{
+    min-height: 420px;
+  }
+}
+
+/* ==========================================================================
+Home
 ========================================================================== */
 
 section.home-about {
   padding: 60px 0;
-  background-color: #f6f7f9;
+  background-color: $background-light;
+  .featured-products .panel{
+    min-height: 260px;
+  }
 }
+
+.featured-products{
+  margin-top: 30px;
+  .add-cart-button{
+    &:hover{
+      background: $bold-color;
+    }
+  }
+  img{
+    padding-bottom: 20px;
+  }
+  .panel{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .view-more{
+    padding-top: 100px;
+  }
+}
+
+.free-shipping{
+  background: $dark-color;
+  text-align: center;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  a{
+    color: #fff;
+  }
+}
+
+/* ==========================================================================
+Uses Sidebar
+========================================================================== */
+
+
+ul.uses-sidebar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    width: 100%;
+    padding-bottom: 20px;
+    color: #24374b;
+    font-size: 20px;
+  }
+}
+
 
 /* ==========================================================================
 Custom Slider Controls (Flickity)
@@ -849,7 +954,10 @@ Features List
 ========================================================================== */
 
 .features-list {
-  padding: 130px 0;
+  padding: 130px 0 60px;
+  .feature-content{
+    min-height: 225px;
+  }
   h1 {
     margin: 0 0 10px 0;
     padding: 0;
@@ -858,7 +966,6 @@ Features List
   }
   p {
     margin-bottom: 20px;
-    color: #778899;
   }
 }
 
@@ -873,14 +980,14 @@ Features List
   margin-right: 25px;
   width: 90px;
   height: 90px;
-  border: solid 2px #4e9ba3;
+  border: solid 2px $bold-color;
   border-radius: 50%;
   vertical-align: top;
   text-align: center;
   font-size: 25px;
   line-height: 90px;
   i {
-    color: #4e9ba3;
+    color: $bold-color;
   }
 }
 
@@ -1008,15 +1115,15 @@ Screenshots Intro
 
 .screenshots-intro {
   padding: 100px 0 40px 0;
-  background-color: #f6f7f9;
+  background-color: $background-light;
   h1 {
     margin-bottom: 20px;
     color: #24374b;
   }
   p {
     margin-bottom: 25px;
-    color: #778899;
   }
+
 }
 
 /* ==========================================================================
@@ -1066,9 +1173,7 @@ Screenshots
     transition: all 300ms ease-in-out;
     a {
       color: #fff;
-      &:hover, &:focus {
-        color: #73d0da;
-      }
+
     }
   }
   figure {
@@ -1089,6 +1194,7 @@ Screenshots
   figcaption {
     i {
       font-size: 35px;
+      color: #fff;
     }
     p {
       margin-bottom: 0;

@@ -11,6 +11,30 @@ title: Designer and Front-end Developer
 				<p class="subhead">A commercial grade product that will replace all of your other penetrants, degreasers, spray on lubricants, white lithium grease, silicones, Teflon, contact cleaners, carburetor cleaners, belt dressings and vinyl, leather and wood treatments.</p>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-8 col-centered text-center">
+				<div class="row featured-products">
+					<div class="col-md-4">
+						<a class="panel panel-padding panel-border" href="#">
+							<img src="{{ site.url | prepend: site.baseurl }}/img/products/gibbsbrand_1_2oz.gif" class="img-responsive pump"/>
+							<div class="product-name">2oz Pump Bottle</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a class="panel panel-padding panel-border" href="#">
+							<img src="{{ site.url | prepend: site.baseurl }}/img/products/gibbsbrand_1_12oz.gif" class="img-responsive"/>
+							<div class="product-name">12oz Can</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a class="panel panel-padding panel-border" href="{{ site.url | prepend: site.baseurl }}/order/">
+							<i class="fa fa-arrow-right view-more"></i><br>
+							View More Products
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -30,7 +54,7 @@ title: Designer and Front-end Developer
 				<div class="col-md-2">
 						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="img-responsive">
 						<h2>{{surface.material}}</h2>
-						<a href="#">Learn More</a>
+						<!-- <a href="#">Learn More</a> -->
 				</div>
 				{% endfor %}
 			</div>
@@ -42,37 +66,18 @@ title: Designer and Front-end Developer
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-
+				{% for feature in site.data.features %}
 				<div class="col-md-4 feature-1 wp2">
 					<div class="feature-icon">
-						<i class="fa fa-desktop"></i>
+						<i class="fa {{feature.icon}}"></i>
 					</div>
 					<div class="feature-content">
-						<h1>Responsive</h1>
-						<p>Built using HTML5/CSS3 and jQuery, and built using one of the world's most powerful CSS frameworks available, Bootstrap.</p>
-						<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
+						<h1>{{feature.name}}</h1>
+						<p>{{feature.description}}</p>
+						<!-- <a href="{{feature.link}}" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a> -->
 					</div>
 				</div>
-				<div class="col-md-4 feature-2 wp2 delay-05s">
-					<div class="feature-icon">
-						<i class="fa fa-flash"></i>
-					</div>
-					<div class="feature-content">
-						<h1>Multi-Purpose</h1>
-						<p>Use gibbs on everything...</p>
-						<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
-					</div>
-				</div>
-				<div class="col-md-4 feature-3 wp2 delay-1s">
-					<div class="feature-icon">
-						<i class="fa fa-heart"></i>
-					</div>
-					<div class="feature-content">
-						<h1>Proudly made in the USA</h1>
-						<p>e made this shit here yo. proudly. </p>
-						<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
-					</div>
-				</div>
+				{% endfor %}
 
 			</div>
 		</div>
@@ -156,15 +161,28 @@ title: Designer and Front-end Developer
 						<img src="{{ site.url | prepend: site.baseurl }}/img/{{use.image}}" alt="Screenshot 01">
 						<figcaption>
 						<div class="caption-content">
-							<a href="{{ site.url | prepend: site.baseurl }}/img/{{use.image-lg}}" class="single_image">
+							<!-- <a href="{{ site.url | prepend: site.baseurl }}/img/{{use.image-lg}}" class="single_image"> -->
 								<i class="fa fa-search"></i><br>
 								<p>{{use.name}}</p>
-							</a>
+							<!-- </a> -->
 						</div>
 						</figcaption>
 					</figure>
 				</li>
 				{% endfor %}
+				<li>
+					<figure>
+						<img src="{{ site.url | prepend: site.baseurl }}/img/08-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="{{ site.url | prepend: site.baseurl }}/usinggibbs/uses/">
+								<i class="fa fa-search"></i><br>
+								<p>View More Uses</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
 
 			</ul>
 		</div>
@@ -177,8 +195,8 @@ title: Designer and Front-end Developer
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center wp4">
-				<h1>Try It Out</h1>
-				<a href="{{ site.url | prepend: site.baseurl }}/shop/" class="use-btn">Get Gibbs</a>
+				<h1>Get Tough, Get Gibbs</h1>
+				<a href="{{ site.url | prepend: site.baseurl }}/order/" class="use-btn">Shop Now</a>
 			</div>
 		</div>
 	</div>
