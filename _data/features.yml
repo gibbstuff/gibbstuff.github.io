@@ -1,0 +1,24 @@
+- name: Penetrant
+  description: "Loosen frozen fasteners, nuts, bolts, hinges, cables."
+  icon: "fa-check"
+  link: "#"
+- name: Conditioner
+  description: "Treat leather, vinyl, plastic, rubber, and wood."
+  icon: "fa-check"
+  link: "#"
+- name: Lubricant
+  description: "Lubricate any moving parts, large or small, and yet does not allow dirt or dust to accumulate."
+  icon: "fa-check"
+  link: "#"
+- name: Inhibitor
+  description: "Remove surface rust from parts and protect from corrosion. Prevent oxidation of bare metal, battery terminals, etc."
+  icon: "fa-check"
+  link: "#"
+- name: Repellant
+  description: "Displace and prevent moisture buildup on components. Protect  hinges, locks, machinery and industrial equipment."
+  icon: "fa-check"
+  link: "#"
+- name: Made in the USA
+  description: "Proudly designed and manufactured right at home."
+  icon: "fa-check"
+  link: "#"

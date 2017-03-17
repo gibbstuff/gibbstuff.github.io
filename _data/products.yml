@@ -1,0 +1,15 @@
+- name: 2oz Pump Bottle
+  image: "gibbsbrand_1_2oz.gif"
+  price: "$10.99"
+- name: 12oz Can
+  image: "gibbsbrand_1_12oz.gif"
+  price: "$16.99"
+- name: 12oz Can and 2oz Pump Bottle
+  image: "gibbsbrand_combo.gif"
+  price: "$24.99"
+- name: 2oz Pump Bottles (Case of 12)
+  image: "gibbsbrand_12_2oz.gif"
+  price: "$89.99"
+- name: 12oz Cans (Case of 12)
+  image: "gibbsbrand_12_12oz.gif"
+  price: "$139.99"
