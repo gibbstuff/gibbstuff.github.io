@@ -12,23 +12,38 @@ hero: false
         <p>Please contact us if you have questions about your order, would like to know more, or you are interested in wholesaling Gibbs.</p>
       </div>
     </div>
+    <div id="form-success" class="hidden">
+      <div class="row">
+        <div  class="col-sm-8 col-centered">
+          <br>
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Thanks for your message, we will get back to you shortly!
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="col-sm-8 col-centered">
-        <form action="/contact#wpcf7-f124-p19-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+      <div class="col-sm-5 col-centered">
+        <script type="text/javascript">var submitted=false;</script>
+        <form name="cform" id="cform" enctype="text/plain" action="{{site.form}}" target="hidden_iframe" onsubmit="submitted=true;">
           <p>
             Name<br>
-            <input type="text" name="your-name" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" required>
+            <input type="text" aria-label="Name" aria-describedby="i.desc.1109973028 i.err.1109973028" name="entry.407554757" id="entry.407554757" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" required>
           </p>
           <p>
             Email<br>
-            <input type="email" name="your-email" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" required>
+            <input type="email" aria-label="Email" aria-describedby="i.desc.572161957 i.err.572161957" name="entry.2142003711" id="entry.2142003711" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" required>
           </p>
           <p>
             Message<br>
-            <textarea name="your-message" cols="40" rows="10" class="form-control" aria-invalid="false" required></textarea>
+            <textarea aria-label="Message" name="entry.2135422795" id="entry.2135422795" cols="40" rows="10" class="form-control" aria-invalid="false" required></textarea>
           </p>
-          <p><input type="submit" value="Send" class="submit-button"></p>
+          <p><input type="submit" value="Send Message" class="submit-button"></p>
         </form>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       </div>
     </div>
   </div>
