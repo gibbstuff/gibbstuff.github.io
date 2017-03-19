@@ -14,19 +14,19 @@ layout: home
 			<div class="col-md-8 col-centered text-center">
 				<div class="row featured-products">
 					<div class="col-md-4">
-						<a class="panel panel-padding panel-border" href="#">
+						<a class="panel panel-padding panel-border wp2" href="#">
 							<img src="{{ site.url | prepend: site.baseurl }}/img/products/gibbsbrand_1_2oz.gif" class="img-responsive pump"/>
 							<div class="product-name">2oz Pump Bottle</div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a class="panel panel-padding panel-border" href="#">
+						<a class="panel panel-padding panel-border wp2" href="#">
 							<img src="{{ site.url | prepend: site.baseurl }}/img/products/gibbsbrand_1_12oz.gif" class="img-responsive"/>
 							<div class="product-name">12oz Can</div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a class="panel panel-padding panel-border" href="{{ site.url | prepend: site.baseurl }}/order/">
+						<a class="panel panel-padding panel-border wp2" href="{{ site.url | prepend: site.baseurl }}/order/">
 							<i class="fa fa-arrow-right view-more"></i><br>
 							View More Products
 						</a>
@@ -50,7 +50,7 @@ layout: home
 			<br>
 			<div class="row text-center">
 				{% for surface in site.data.surfaces %}
-				<div class="col-md-2">
+				<div class="col-md-2 wp3">
 						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="img-responsive">
 						<h2>{{surface.material}}</h2>
 						<!-- <a href="#">Learn More</a> -->
@@ -66,7 +66,7 @@ layout: home
 		<div class="row">
 			<div class="col-md-12">
 				{% for feature in site.data.features %}
-				<div class="col-md-4 feature-1 wp2">
+				<div class="col-md-4 feature-1 wp1">
 					<div class="feature-icon">
 						<i class="fa {{feature.icon}}"></i>
 					</div>
