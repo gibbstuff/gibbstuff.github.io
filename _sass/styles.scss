@@ -794,6 +794,14 @@ Shop page
   .panel{
     min-height: 420px;
   }
+  .contact-btn{
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+  }
+  .contact-btn:hover{
+    background-color: $bold-color;
+    color: #fff;
+  }
 }
 
 /* ==========================================================================
@@ -1244,7 +1252,7 @@ Footer
 ========================================================================== */
 
 footer {
-  padding: 100px 0;
+  padding: 60px 0 100px 0;
   background: $dark-color;
   .logo{
     max-width: 150px;

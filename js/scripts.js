@@ -3,7 +3,7 @@ $(document).ready(function() {
 	/***************** Waypoints ******************/
 
 	$('.wp1').waypoint(function() {
-		$('.wp1').addClass('animated fadeInLeft');
+		$('.wp1').addClass('animated fadeInDown');
 	}, {
 		offset: '75%'
 	});
@@ -63,7 +63,7 @@ $('a[href*=#]:not([href=#])').click(function() {
 		if (target.length) {
 			$('html,body').animate({
 				scrollTop: target.offset().top
-			}, 2000);
+			}, 1000);
 			return false;
 		}
 	}
