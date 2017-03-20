@@ -814,6 +814,10 @@ section.home-about {
   .featured-products .panel{
     min-height: 260px;
   }
+  h2{
+    margin: 0.67em 0;
+    font-size: 2em;
+  }
 }
 
 .featured-products{
@@ -926,7 +930,7 @@ Features Slider
     }
   }
   li {
-    h1 {
+    h2 {
       margin-bottom: 15px;
       color: #fff;
       font-weight: 400;
@@ -943,7 +947,7 @@ Features Slider
   position: relative;
 }
 
-.slides li h1 {
+.slides li h2 {
   margin: 0;
   padding: 0;
 }
@@ -966,7 +970,7 @@ Features List
   .feature-content{
     min-height: 225px;
   }
-  h1 {
+  h2 {
     margin: 0 0 10px 0;
     padding: 0;
     color: #24374b;
@@ -1034,11 +1038,13 @@ Surfaces
 
 .surfaces {
   background: $dark-color;
-  h1 {
+  h2 {
+    margin: 0.67em 0;
+    font-size: 2em;
     margin: 0 0 20px 0;
     color: #fff;
   }
-  h2{
+  h3{
     color: #fff;
     font-weight: 400;
     font-size: 22px;
@@ -1066,7 +1072,7 @@ Showcase
 .showcase {
   background: url('../img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
   background-size: cover;
-  h1 {
+  h2 {
     margin: 0 0 20px 0;
     color: #fff;
     font-weight: 400;
@@ -1124,7 +1130,9 @@ Screenshots Intro
 .screenshots-intro {
   padding: 100px 0 40px 0;
   background-color: $background-light;
-  h1 {
+  h2 {
+    margin: 0.67em 0;
+    font-size: 2em;
     margin-bottom: 20px;
     color: #24374b;
   }
@@ -1239,7 +1247,7 @@ Download Now
 .download {
   padding: 120px 0;
   background-color: #f1f1f1;
-  h1 {
+  h2 {
     margin: 0 0 15px 0;
     color: $dark-color;
     font-weight: 400;

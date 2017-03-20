@@ -6,7 +6,7 @@ layout: home
 		<div class="row">
 			<div class="col-md-8 col-centered text-center">
 				<p class="upper brand-color-text">What Is Gibbs?</p>
-				<h1>Gibbs Brand Lubricant is the supreme penetrating, lubricating, and universal surface conditioning fluid.</h1>
+				<h2>Gibbs Brand Lubricant is the supreme penetrating, lubricating, and universal surface conditioning fluid.</h2>
 				<p class="subhead">A commercial grade product that will replace all of your other penetrants, degreasers, spray on lubricants, white lithium grease, silicones, Teflon, contact cleaners, carburetor cleaners, belt dressings and vinyl, leather and wood treatments.</p>
 			</div>
 		</div>
@@ -43,7 +43,7 @@ layout: home
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 col-centered text-center">
-					<h1>Multi-Surface & Multi-Purpose</h1>
+					<h2>Multi-Surface & Multi-Purpose</h2>
 					<p class="subhead">Gibbs is versatile, it has been tested on various metal, wood, glass, leather, rubber and most plastics, making the usecases endless.</p>
 				</div>
 			</div>
@@ -52,7 +52,7 @@ layout: home
 				{% for surface in site.data.surfaces %}
 				<div class="col-md-2 wp3">
 						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="img-responsive">
-						<h2>{{surface.material}}</h2>
+						<h3>{{surface.material}}</h3>
 						<!-- <a href="#">Learn More</a> -->
 				</div>
 				{% endfor %}
@@ -71,7 +71,7 @@ layout: home
 						<i class="fa {{feature.icon}}"></i>
 					</div>
 					<div class="feature-content">
-						<h1>{{feature.name}}</h1>
+						<h2>{{feature.name}}</h2>
 						<p>{{feature.description}}</p>
 						<!-- <a href="{{feature.link}}" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a> -->
 					</div>
@@ -99,7 +99,7 @@ layout: home
 						<ul class="slides" id="featuresSlider">
 							{% for testimonial in site.data.testimonials %}
 								<li>
-									<h1>{{testimonial.short | liquify}}</h1>
+									<h2>{{testimonial.short | liquify}}</h2>
 									<p>{{testimonial.quote | liquify}}</p>
 									<p>-{{testimonial.name | liquify}}</p>
 								</li>
@@ -123,7 +123,7 @@ layout: home
 					</div>
 				</div>
 				<div class="col-md-6">
-					<h1>Multi-Surface & Multi-Purpose</h1>
+					<h2>Multi-Surface & Multi-Purpose</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 					<blockquote class="team-quote">
 						<div class="avatar"><img src="{{ site.url | prepend: site.baseurl }}/img/avatar.png" alt="User Avatar"></div>
@@ -143,7 +143,7 @@ layout: home
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1>Popular Uses</h1>
+				<h2>Popular Uses</h2>
 				<p class="subhead">Gibbs can be used almost anywhere, lean more about some common examples.</p>
 			</div>
 		</div>
@@ -194,7 +194,8 @@ layout: home
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center wp4">
-				<h1>Get Tough, Get Gibbs</h1>
+				<h2>Get Tough, Get Gibbs</h2>
+				<br>
 				<a href="{{ site.url | prepend: site.baseurl }}/order/" class="use-btn">Shop Now</a>
 			</div>
 		</div>
