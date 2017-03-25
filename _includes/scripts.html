@@ -6,6 +6,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{"/js/retina.js" | prepend: site.baseurl}}"></script>
 <script src="{{"/js/waypoints.min.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/js/simpleCart.min.js" | prepend: site.baseurl}}"></script>
 <script src="{{"/js/bootstrap.min.js" | prepend: site.baseurl}}"></script>
 <script src="{{"/js/min/scripts-min.js" | prepend: site.baseurl}}"></script>
 
@@ -29,4 +30,13 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
     $('#form-success').removeClass('hidden');
   });
 })(jQuery);
+</script>
+
+<script>
+	simpleCart({
+		checkout: {
+			type: "PayPal" ,
+			email: "you@yours.com"
+		}
+	});
 </script>
