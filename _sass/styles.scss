@@ -688,7 +688,7 @@ Navigation
   &:focus {
     outline: none;
   }
-  span {
+  .mobile-menu-icon {
     content: '';
     position: absolute;
     display: block;
@@ -720,7 +720,7 @@ Navigation
       transition: all 300ms ease-in-out;
     }
   }
-  &.active span {
+  &.active .mobile-menu-icon {
     background-color: transparent;
     &:before, &:after {
       top: 0;
@@ -752,6 +752,10 @@ Navigation
   position: fixed;
   top: 59px;
   right: 143px;
+}
+
+.mobile-menu-text{
+  display: inline-block;
 }
 
 /* ==========================================================================
@@ -850,6 +854,22 @@ section.home-about {
   padding: 15px;
   text-align: center;
   font-size: 18px;
+  a{
+    color: #fff;
+  }
+}
+
+.mobile-nav-cart{
+  background: $dark-color;
+  text-align: center;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100000;
+  position: fixed;
+  width: 100%;
   a{
     color: #fff;
   }
