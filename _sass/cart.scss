@@ -1,0 +1,82 @@
+.cart-page{
+  .headerRow{
+    display: none;
+  }
+  .item-name{
+    font-weight: bold;
+    font-size: 16px;
+    float: left;
+  }
+  .item-quantity{
+    display: inline-block;
+    input{
+      max-width: 75px;
+      height: 36px;
+      margin-right: 5px;
+    }
+  }
+  .item-x-label{
+    padding: 0 10px;
+  }
+  .item-spacer{
+    clear: both;
+  }
+  .item-price,
+  .item-price-label,
+  .item-x-label{
+    display: inline-block;
+    font-size: 14px;
+    color: #8e9398;
+  }
+  .itemRow{
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+  .item-remove{
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: right;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 0px;
+    float:right;
+  }
+  .cart-button{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    border: 0;
+    padding: 20px 50px;
+    border-radius: 3px;
+    background-color: $bold-color;
+    color: #fff;
+    font-size: 16px;
+    &:hover, &:focus {
+      background-color: darken( $bold-color, 10% );
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .item-remove{
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .item-btn-fake{
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .item-total{
+    clear: both;
+  }
+}

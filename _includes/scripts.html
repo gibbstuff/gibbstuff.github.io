@@ -37,6 +37,42 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 		checkout: {
 			type: "PayPal" ,
 			email: "you@yours.com"
-		}
+		},
+    cartColumns: [
+        { attr: "name" , label: "Name" } ,
+        { view: "remove" , text: "Remove" , label: false },
+        { view: function(item, column){
+            return  "";
+          } ,
+          attr: "spacer" ,
+          label: false
+        },
+
+        { attr: "price" , label: "Price", view: 'currency' } ,
+
+        { view: function(item, column){
+            return  "x";
+          } ,
+          attr: "x-label" ,
+          label: "Quantity"
+        },
+        { view:'input', attr:'quantity', label: "Quantity" },
+        { view: function(item, column){
+            return  "Update";
+          } ,
+          attr: "btn-fake" ,
+          label: false
+        },
+        { view: function(item, column){
+            return  "";
+          } ,
+          attr: "spacer" ,
+          label: ""
+        }
+
+
+
+
+    ]
 	});
 </script>

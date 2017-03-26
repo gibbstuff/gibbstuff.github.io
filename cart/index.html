@@ -14,6 +14,7 @@ hero: false
             <h1>Your Shopping Cart</h1>
           </div>
         </div>
+        
         <div class="row">
     			<div class="col-md-8">
           	<div class="simpleCart_items" >
@@ -21,14 +22,32 @@ hero: false
     			</div>
           <div class="col-md-4">
             <div class="panel panel-padding panel-border">
-              SubTotal: <span id="simpleCart_total" class="simpleCart_total"></span> <br />
-            	Tax Rate: <span id="simpleCart_taxRate" class="simpleCart_taxRate"></span> <br />
-            	Tax: <span id="simpleCart_tax" class="simpleCart_tax"></span> <br />
-            	Shipping: <span id="simpleCart_shipping" class="simpleCart_shipping"></span> <br />
-            	-----------------------------<br />
-            	Final Total: <span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span> <br />
+              <div class="row">
+                <div class="col-sm-6">SubTotal:</div>
+                <div class="col-sm-6 text-right"><span id="simpleCart_total" class="simpleCart_total"></span></div>
+              </div>
 
-            	<a href="javascript:;" class="simpleCart_checkout add-cart-button">Checkout</a>
+              <div class="row">
+                <div class="col-sm-6">Tax Rate:</div>
+                <div class="col-sm-6 text-right"><span id="simpleCart_taxRate" class="simpleCart_taxRate"></span></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">Tax:</div>
+                <div class="col-sm-6 text-right"><span id="simpleCart_tax" class="simpleCart_tax"></span></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">Shipping:</div>
+                <div class="col-sm-6 text-right"><span id="simpleCart_shipping" class="simpleCart_shipping"></span></div>
+              </div>
+
+            	<hr>
+
+              <div class="row">
+                <div class="col-sm-6">Final Total:</div>
+                <div class="col-sm-6 text-right"><span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span></div>
+              </div>
+
+            	<a href="javascript:;" class="simpleCart_checkout cart-button">Checkout</a>
             </div>
     			</div>
     		</div>
