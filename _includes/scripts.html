@@ -32,6 +32,17 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 })(jQuery);
 </script>
 
+<script type="text/javascript">
+(function($){
+  $('.add-cart-button').on('click', function(event) {
+    event.target.innerHTML = 'Added!';
+    setInterval(function(){
+       event.target.innerHTML = 'Add to Cart';
+    }, 2500);
+  });
+})(jQuery);
+</script>
+
 <script>
 	simpleCart({
 		checkout: {
