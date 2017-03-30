@@ -835,6 +835,7 @@ section.home-about {
     }
   }
   img{
+    margin: 0 auto;
     padding-bottom: 20px;
   }
   .panel{
@@ -927,16 +928,23 @@ Features Slider
 
 .features-bg {
   position: relative;
-  min-height: 400px;
+  min-height: 200px;
   background: url('../img/features-intro-01.jpg') no-repeat center center;
   background-size: cover;
+  @include breakp($bp-large){
+    min-height: 400px;
+  }
 }
 
 .features-img {
   width: 100%;
-  height: 400px;
+  height: 200px;
   text-align: center;
-  line-height: 400px;
+  line-height: 200px;
+  @include breakp($bp-large){
+    height: 400px;
+    line-height: 400px;
+  }
 }
 
 .features-slider {
@@ -989,9 +997,14 @@ Features List
 ========================================================================== */
 
 .features-list {
-  padding: 130px 0 60px;
+  padding: 100px 0 60px;
+  @include breakp($bp-large){
+    padding: 130px 0 60px;
+  }
   .feature-content{
-    min-height: 225px;
+    @include breakp($bp-large){
+      min-height: 225px;
+    }
   }
   h2 {
     margin: 0 0 10px 0;
@@ -1075,6 +1088,10 @@ Surfaces
   p {
     margin-bottom: 25px;
     color: #fff;
+  }
+  .texture-img{
+    max-width: 150px;
+    margin: 0 auto;
   }
 
   .surfaces-wrap {

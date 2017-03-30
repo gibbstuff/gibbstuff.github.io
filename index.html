@@ -50,8 +50,8 @@ layout: home
 			<br>
 			<div class="row text-center">
 				{% for surface in site.data.surfaces %}
-				<div class="col-md-2 wp3">
-						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="img-responsive">
+				<div class="col-xs-6 col-sm-4 col-lg-2 wp3">
+						<img src="{{ site.url | prepend: site.baseurl }}/img/surfaces/{{surface.image}}" class="texture-img img-responsive">
 						<h3>{{surface.material}}</h3>
 						<!-- <a href="#">Learn More</a> -->
 				</div>

@@ -4,7 +4,7 @@
 	.feature-content{width:55%;}
 }
 @media screen and (max-width:991px){
-	.feature-1,.feature-2{margin-bottom:50px;}
+	.feature-1,.feature-2{margin-bottom:10px;}
 	.device{display:none;}
 	.screenshots ul li{width:50%;}
 	.screenshots-intro{padding:110px 0 100px 0;}
@@ -15,7 +15,6 @@
 	.feature-content{width:60%;}
 }
 @media screen and (max-width:640px){
-	.use-btn{display:none;}
 	footer li{display:block;text-align:left;padding:20px 0;border-bottom:dashed 1px #c7cacc;margin-right:0!important;float:none;}
 	nav{margin-top:40px;}
 	.overlay ul{margin-left:0px;}
