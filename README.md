@@ -4,7 +4,7 @@ Static website builder for Gibbs Tuff
 
 ## Install Dependencies
 
-You'll need ruby 2.2.0
+You'll need ruby 2.7.0
 
 ## Just Build Dev Localhost
 
