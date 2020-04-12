@@ -47,8 +47,10 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 	simpleCart({
 		checkout: {
 			type: "PayPal" ,
-			email: "you@yours.com"
-		},
+			email: "gibbstuffinc@gmail.com"
+    },
+    currency: "USD",
+    language: "english-us",
     cartColumns: [
         { attr: "name" , label: "Name" } ,
         { view: "remove" , text: "Remove" , label: false },
@@ -81,9 +83,21 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
           label: ""
         }
 
-
-
-
     ]
-	});
+  });
+  
+  /* if the cart is empty */
+  simpleCart.bind('update', function () {
+    if (simpleCart.quantity() <= 0) {
+        //alert(simpleCart.quantity())
+        $(".simpleCart_items").hide();
+        $("#emptyCartDisplay").show();
+        $(".simpleCart_checkout").hide();
+    }
+    else {
+        $(".simpleCart_items").show();
+        $("#emptyCartDisplay").hide();
+        $(".simpleCart_checkout").show();
+    }
+});
 </script>
