@@ -25,8 +25,18 @@ hero: false
           <div class="col-md-4">
             <div class="panel panel-padding panel-border">
               <div class="row">
-                <div class="col-sm-6">SubTotal:</div>
-                <div class="col-sm-6 text-right"><span id="simpleCart_total" class="simpleCart_total"></span></div>
+                <div class="col-sm-8">SubTotal:</div>
+                <div class="col-sm-4 text-right"><span id="simpleCart_total" class="simpleCart_total"></span></div>
+                <div class="col-sm-8">Tax: </div>
+                <div class="col-sm-4 text-right"><span class="simpleCart_tax"></span></div>
+
+                <div class="col-sm-12" id="shippingLocation">
+                  <br/>
+                  <strong>Where is this being shipped?</strong><br>
+                  <input type="radio" name="shippingLocation" value="usa" checked="checked"> USA (excluding Florida)<br />
+                  <input type="radio" name="shippingLocation" value="florida"> Florida<br />
+                  <input type="radio" name="shippingLocation" value="world"> Outside the US<br />
+                </div>
               </div>
 
               <hr>
@@ -34,7 +44,7 @@ hero: false
               <div class="row">
                 <div class="col-sm-12 text-center">
                   <p>
-                    Proceed to PayPal to calculate total.
+                    Proceed to PayPal for total.
                   </p>
                 </div>
               </div>

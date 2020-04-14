@@ -49,6 +49,7 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 			type: "PayPal" ,
 			email: "gibbstuffinc@gmail.com"
     },
+    taxRate: 0.00,
     currency: "USD",
     language: "english-us",
     cartColumns: [
@@ -85,19 +86,43 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 
     ]
   });
+
+  //* Refresh cart once simpleCart is ready to listen.
+simpleCart.ready(function() {
+  
+});
   
   /* if the cart is empty */
   simpleCart.bind('update', function () {
-    if (simpleCart.quantity() <= 0) {
-        //alert(simpleCart.quantity())
-        $(".simpleCart_items").hide();
-        $("#emptyCartDisplay").show();
-        $(".simpleCart_checkout").hide();
+      if (simpleCart.quantity() <= 0) {
+          $(".simpleCart_items").hide();
+          $("#emptyCartDisplay").show();
+          $(".simpleCart_checkout").hide();
+      }
+      else {
+          $(".simpleCart_items").show();
+          $("#emptyCartDisplay").hide();
+          $(".simpleCart_checkout").show();
+      }
+  });
+
+
+  $("#shippingLocation").on("change", function(){
+
+    var shippingLocation;
+    shippingLocation = $('#shippingLocation input:checked').val();
+    
+    if (shippingLocation === 'florida') {
+      simpleCart({
+        taxRate: 0.07
+      });
+    } else {
+      simpleCart({
+        taxRate: 0.00
+      });
     }
-    else {
-        $(".simpleCart_items").show();
-        $("#emptyCartDisplay").hide();
-        $(".simpleCart_checkout").show();
-    }
-});
+
+    return $('.simpleCart_tax').html('$' + parseFloat(simpleCart.taxRate() * simpleCart.total()).toFixed(2));
+
+  });
 </script>
