@@ -1395,11 +1395,13 @@ Nav Overlay
 /* Effects */
 
 .overlay-boxify {
+  display:none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
   transition: opacity 0.5s, visibility 0s 0.5s;
   &.open {
+    display: block;
     visibility: visible;
     opacity: 1;
     -webkit-transition: opacity 0.5s;
