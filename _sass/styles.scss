@@ -10,12 +10,6 @@ Global Styles
   background-color: $background-light;
 }
 
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 a {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
@@ -23,6 +17,11 @@ a {
   transition-duration: 300ms;
   -webkit-transition-property: color, border-color, background-color;
   transition-property: color, border-color, background-color;
+  color: $link-color;
+  &:hover, &:focus {
+    color: $bold-color;
+    text-decoration: none;
+  }
 }
 
 .nopadding {
@@ -48,21 +47,10 @@ p {
 
 a.panel{
   border: 2px solid #fff;
-  &:hover{
-    border: 2px solid $bold-color;
-  }
 }
 
-.brand-color-text{
+.brand-color-text {
   color: $bold-color;
-}
-
-a {
-  color: $link-color;
-  &:hover, &:focus {
-    color: $bold-color;
-    text-decoration: none;
-  }
 }
 
 .texture-overlay {
@@ -78,11 +66,17 @@ a {
   text-transform: uppercase;
 }
 
+.visible {
+  opacity: 1;
+}
+
 /* ==========================================================================
 Buttons
 ========================================================================== */
 
-.use-btn, .submit-button, .add-cart-button {
+.use-btn,
+.submit-button,
+.add-cart-button {
   display: inline-block;
   margin: 0 10px 10px 0;
   border: 0;
@@ -97,7 +91,7 @@ Buttons
     text-decoration: none;
   }
 }
-.add-cart-button{
+.add-cart-button {
   width: 100%;
 }
 
@@ -110,7 +104,7 @@ Buttons
   font-size: 16px;
 }
 
-.learn-btn, .download-btn {
+.learn-btn {
   display: inline-block;
   padding: 18px 46px;
   border: 2px solid #fff;
@@ -119,32 +113,11 @@ Buttons
   font-size: 16px;
 }
 
-.learn-btn:hover, .download-btn:hover, .learn-btn:focus, .download-btn:focus {
+.learn-btn:hover,
+.learn-btn:focus {
   border-color: $bold-color;
   color: $bold-color;
   text-decoration: none;
-}
-
-.read-more-btn {
-  display: inline-block;
-  color: #323a45;
-  text-transform: uppercase;
-  font-weight: 400;
-  i {
-    margin-left: 5px;
-  }
-}
-
-.download-btn i {
-  margin-left: 5px;
-}
-
-.showcase .download-btn {
-  margin-top: 50px;
-}
-
-.download .download-btn {
-  margin-top: 25px;
 }
 
 /* ==========================================================================
@@ -250,7 +223,9 @@ Hero
 ========================================================================== */
 .home .hero{
   min-height: 800px;
-  background: $dark-color url('../img/hero-01.jpg') no-repeat center center;
+  i {
+    margin-left: 5px;
+  }
 }
 .hero {
   position: relative;
@@ -272,13 +247,10 @@ Hero
   }
 }
 
-#home, .hero {
+#home,
+.hero {
   width: 100%;
   height: 100%;
-}
-
-header i {
-  margin-left: 5px;
 }
 
 /* ==========================================================================
@@ -306,7 +278,7 @@ section.home-about {
   padding: 60px 0;
   background-color: $background-light;
   .featured-products .panel{
-    min-height: 260px;
+    min-height: 275px;
   }
   h2{
     margin: 0.67em 0;
@@ -342,7 +314,7 @@ section.home-about {
   padding: 15px;
   text-align: center;
   font-size: 18px;
-  a{
+  a {
     color: #fff;
   }
 }
@@ -358,7 +330,7 @@ section.home-about {
   z-index: 100000;
   position: fixed;
   width: 100%;
-  a{
+  a {
     color: #fff;
   }
 }
@@ -366,7 +338,6 @@ section.home-about {
 /* ==========================================================================
 Uses Sidebar
 ========================================================================== */
-
 
 ul.uses-sidebar {
   margin: 0;
@@ -379,7 +350,6 @@ ul.uses-sidebar {
     font-size: 20px;
   }
 }
-
 
 /* ==========================================================================
 Custom Slider Controls (Flickity)
@@ -413,24 +383,28 @@ Page Style
 Features Slider
 ========================================================================== */
 
-.features-bg {
-  position: relative;
-  min-height: 200px;
-  background: url('../img/features-intro-01.jpg') no-repeat center center;
-  background-size: cover;
-  @include breakp($bp-large){
-    min-height: 400px;
+.features-intro{
+  .features-bg {
+    position: relative;
+    min-height: 200px;
+    background: url('../img/features-intro-01.jpg') no-repeat center center;
+    background-size: cover;
+    @include breakp($bp-large){
+      min-height: 400px;
+    }
   }
-}
-
-.features-img {
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  @include breakp($bp-large){
-    height: 400px;
-    line-height: 400px;
+  .features-img {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    @include breakp($bp-large){
+      height: 400px;
+      line-height: 400px;
+    }
+  }
+  .features-intro-img {
+    position: relative;
   }
 }
 
@@ -439,12 +413,12 @@ Features Slider
   padding: 11% 100px 10% 100px;
   height: 400px;
   background-color: $dark-color;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      width: 100%;
+  .flickity-page-dots {
+    text-align: left;
+    margin-top: 50px;
+    position: static;
+    .dot {
+      margin: 0 12px 0 0;
     }
   }
   li {
@@ -459,28 +433,25 @@ Features Slider
       font-size: 14px;
     }
   }
-}
-
-.features-intro-img {
-  position: relative;
-}
-
-.slides li h2 {
-  margin: 0;
-  padding: 0;
-}
-
-.features-slider .flickity-page-dots {
-  text-align: left;
-  margin-top: 50px;
-  position: static;
-  .dot {
-    margin: 0 12px 0 0;
+  .slides li h2 {
+    margin: 0;
+    padding: 0;
   }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      width: 100%;
+    }
+  }
+  
 }
+
 
 /* ==========================================================================
 Features List
+The homepage feature listings
 ========================================================================== */
 
 .features-list {
@@ -527,36 +498,8 @@ Features List
 }
 
 /* ==========================================================================
-Blockquote
-========================================================================== */
-
-blockquote {
-  margin: 40px 0 0;
-  padding: 0;
-  border: none;
-  p {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 70%;
-    vertical-align: top;
-    font-style: italic;
-  }
-  .avatar {
-    display: inline-block;
-    margin-right: 20px;
-    width: 64px;
-    height: 64px;
-    vertical-align: middle;
-  }
-  .logo-quote {
-    display: inline-block;
-    margin: 0 0 0 90px;
-  }
-}
-
-/* ==========================================================================
 Surfaces
+This is the surfaces section on homepage
 ========================================================================== */
 
 .surfaces {
@@ -595,176 +538,10 @@ Surfaces
 Showcase
 ========================================================================== */
 
-
-.showcase {
-  background: url('../img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
-  background-size: cover;
-  h2 {
-    margin: 0 0 20px 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  p {
-    margin-bottom: 25px;
-    color: #fff;
-  }
-}
-
-.device {
-  position: absolute;
-  top: -60px;
-  left: 20%;
-  min-height: 676px;
-  width: 359px;
-
-}
-
-.device-content {
-  position: absolute;
-  top: 115px;
-  left: 56px;
-  width: 247px;
-  height: 445px;
-  img {
-    width: auto;
-    height: 445px;
-  }
-}
-
 .showcase-wrap {
   position: relative;
   padding: 100px 0;
   min-height: 600px;
-}
-
-.showcase-slider {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .flickity-page-dots {
-    bottom: 20px;
-  }
-}
-
-
-/* ==========================================================================
-Screenshots Intro
-========================================================================== */
-
-.screenshots-intro {
-  padding: 100px 0 40px 0;
-  background-color: $background-light;
-  h2 {
-    margin: 0.67em 0;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #24374b;
-  }
-  p {
-    margin-bottom: 25px;
-  }
-
-}
-
-/* ==========================================================================
-Screenshots
-========================================================================== */
-
-.screenshots {
-  ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    li {
-      float: left;
-      min-height: 100%;
-      width: 25%;
-      background-color: $dark-color;
-      list-style: none;
-    }
-  }
-  figure {
-    position: relative;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      -webkit-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-    }
-    &:hover img, &:focus img {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-  }
-  figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 25% 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(26, 26, 36, .95);
-    text-align: center;
-    font-size: 15px;
-    opacity: 0;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-    a {
-      color: #fff;
-
-    }
-  }
-  figure {
-    &:hover figcaption, &:focus figcaption {
-      opacity: 1;
-    }
-  }
-}
-
-.visible {
-  opacity: 1;
-}
-
-.screenshots {
-  figure.cs-hover figcaption {
-    opacity: 1;
-  }
-  figcaption {
-    i {
-      font-size: 35px;
-      color: #fff;
-    }
-    p {
-      margin-bottom: 0;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .caption-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -40px;
-      margin-left: -100px;
-      width: 200px;
-      -webkit-transform: translate(0px, 15px);
-      -ms-transform: translate(0px, 15px);
-      transform: translate(0px, 15px);
-      -webkit-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-    }
-  }
-  figure {
-    &:hover figcaption .caption-content, &:focus figcaption .caption-content {
-      -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-      transform: translate(0px, 0px);
-    }
-  }
 }
 
 /* ==========================================================================
@@ -779,6 +556,9 @@ Download Now
     color: $dark-color;
     font-weight: 400;
     font-size: 40px;
+  }
+  .download-btn {
+    margin-top: 25px;
   }
 }
 
@@ -877,8 +657,6 @@ Nav Overlay
 }
 
 /* Menu style */
-
-/* Effects */
 
 .overlay-boxify {
   display:none;

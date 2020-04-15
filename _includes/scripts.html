@@ -87,11 +87,7 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
     ]
   });
 
-  //* Refresh cart once simpleCart is ready to listen.
-simpleCart.ready(function() {
-  
-});
-  
+
   /* if the cart is empty */
   simpleCart.bind('update', function () {
       if (simpleCart.quantity() <= 0) {
@@ -125,4 +121,5 @@ simpleCart.ready(function() {
     return $('.simpleCart_tax').html('$' + parseFloat(simpleCart.taxRate() * simpleCart.total()).toFixed(2));
 
   });
+
 </script>
