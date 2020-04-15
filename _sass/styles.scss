@@ -234,9 +234,13 @@ Hero
   background-size: cover;
   color: #fff;
   h1 {
-    margin: 200px 0 45px 0;
+    font-size:30px;
+    margin:100px 0 45px 0;
     font-weight: 300;
-    font-size: 45px;
+    @include breakp($bp-medium){
+      font-size: 45px;
+      margin: 200px 0 45px 0;
+    }
     span {
       display: inline-block;
       color: #a1a9b0;
@@ -258,7 +262,7 @@ Shop page
 ========================================================================== */
 .shop-page{
   .panel{
-    min-height: 420px;
+    min-height: 450px;
   }
   .contact-btn{
     -webkit-transition: all 300ms ease-in-out;
@@ -411,8 +415,12 @@ Features Slider
 .features-slider {
   position: relative;
   padding: 11% 100px 10% 100px;
-  height: 400px;
   background-color: $dark-color;
+  padding: 11% 50px 10% 50px;
+  height:100%;
+  @include breakp($bp-medium){
+    height: 400px;
+  }
   .flickity-page-dots {
     text-align: left;
     margin-top: 50px;
@@ -459,11 +467,6 @@ The homepage feature listings
   @include breakp($bp-large){
     padding: 130px 0 60px;
   }
-  .feature-content{
-    @include breakp($bp-large){
-      min-height: 225px;
-    }
-  }
   h2 {
     margin: 0 0 10px 0;
     padding: 0;
@@ -473,17 +476,42 @@ The homepage feature listings
   p {
     margin-bottom: 20px;
   }
+  .feature-1,
+  .feature-2{
+    margin-bottom:10px;
+    @include breakp($bp-large){
+      margin-bottom:0px;
+    }
+  }
 }
 
 .feature-content {
+  width:100%;
+  text-align:center;
+  margin-top:20px;
   display: inline-block;
   margin-left: 0;
-  width: 65%;
+  @include breakp($bp-small){
+    width: 55%; 
+    text-align:left; 
+  }
+  @include breakp($bp-medium){
+    width: 80%;  
+    
+    margin-top: 0px;
+  }
+  @include breakp($bp-large){
+    width: 55%;  
+    min-height: 225px;
+  }
+  @include breakp($bp-xlarge){
+    width: 65%;  
+  }
 }
 
 .feature-icon {
-  display: inline-block;
-  margin-right: 25px;
+  display:block;
+  margin:0 auto;
   width: 90px;
   height: 90px;
   border: solid 2px $bold-color;
@@ -492,6 +520,10 @@ The homepage feature listings
   text-align: center;
   font-size: 25px;
   line-height: 90px;
+  @include breakp($bp-small){
+    display: inline-block;
+    margin-right: 25px;
+  }
   i {
     color: $bold-color;
   }
@@ -580,11 +612,23 @@ footer {
     margin-top: 30px;
   }
   li {
-    float: left;
-    margin-right: 15%;
-    list-style: none;
-    text-transform: uppercase;
-    font-weight: 400;
+    display:block;
+    text-align:left;
+    padding:20px 0;
+    border-bottom:dashed 1px #c7cacc;
+    margin-right: 0;
+    float:none;
+    @include breakp($bp-large){
+      border-bottom:solid 0px transparent;
+      float: left;
+      margin-right: 10%;
+      list-style: none;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    @include breakp($bp-xlarge){
+      margin-right:15%
+    }
     a {
       color: #fff;
     }
@@ -609,19 +653,25 @@ Nav Overlay
   nav {
     position: relative;
     top: 50%;
-    height: 60%;
     text-align: center;
     font-size: 54px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    margin-top:40px;
+    @include breakp($bp-medium){
+      margin-top: 0px;
+    }
   }
   ul {
     position: relative;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     list-style: none;
+    @include breakp($bp-medium){
+      margin: 0 auto;
+    }
     li {
       display: block;
       float: left;
@@ -636,17 +686,22 @@ Nav Overlay
       }
       a {
         display: block;
-        padding: 50px 0;
-        min-width: 190px;
+        padding:20px 0;
+        min-width:120px;
         border: 2px solid #fff;
         border-radius: 3px;
         background-color: #fff;
         color: $dark-color;
         text-transform: uppercase;
         font-weight: 400;
-        font-size: 15px;
+        font-size:12px;
         -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
+        @include breakp($bp-medium){
+          font-size: 15px;
+          min-width: 190px;
+          padding: 50px 0;
+        }
         &:hover, &:focus {
           border-color: $bold-color;
           color: $bold-color;
