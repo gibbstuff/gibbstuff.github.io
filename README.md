@@ -20,3 +20,5 @@ To use YML Files use the following template structure: {{site.data.filename.key}
 ## Content Blocks
 
 See https://github.com/rustygeldmacher/jekyll-contentblocks
+
+Ping!
